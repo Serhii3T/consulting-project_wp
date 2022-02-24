@@ -1,0 +1,153 @@
+.c-banner {
+  padding: 115px 0 80px;
+
+  @include media ('<tablet') {
+    padding: 0 0 80px;
+  }
+
+  &__wrapper{
+    min-height: 590px;
+    display: flex;
+
+    @include media ('<desktop') {
+      flex-direction: column;
+    }
+
+    @include media ('<tablet') {
+      padding: 50px 0 80px;
+    }
+  }
+
+  &__wrap {
+    justify-content: space-between;
+    max-width: 635px;
+    display: flex;
+    width: 100%;
+
+    @include media ('<desktop') {
+      justify-content: center;
+      position: relative;
+      max-width: none;
+    }
+  }
+
+  &__social-link {
+    justify-content: flex-end;
+    flex-direction: column;
+    display: flex;
+
+    @include  media ('<desktop') {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    @include media ('<600px') {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    font-family: "Font Awesome 5 Brands";
+    line-height: $lh-sl;
+    color: $c-silver;
+    font-size: 14px;
+
+    & i {
+      font-style: normal;
+    }
+
+    &:hover{
+      color: $c-daisy;
+    }
+  }
+
+  &__home{
+    margin-bottom: 40px;
+    max-width: 360px;
+
+    @include media ('<desktop') {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    @include media ('<phone') {
+      text-align: center;
+    }
+  }
+
+  &__title{
+    margin-bottom: 40px;
+
+    @include media ('<phone') {
+      font-size: $fs-quote;
+    }
+  }
+
+  &__subtitle{
+    margin-bottom: 60px;
+  }
+
+  &__buttons{
+    justify-content: space-between;
+    display: flex;
+
+    @include media ('<desktop') {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    @include media ('<550px') {
+      flex-direction: column;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  &__btn{
+    letter-spacing: $ls-sm;
+    line-height: $lh-btn;
+    border-radius: 20px;
+    min-width: 140px;
+
+    &--daisy{
+      background-color: $c-daisy;
+      color: $c-white;
+
+      @include media ('<550px') {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--peppermint{
+      background-color: $c-peppermint;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+
+    @include media ('<desktop') {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    max-height: 1075px;
+    max-width: 865px;
+    right: 115px;
+    z-index: -1;
+    bottom: 0;
+
+    @include media ('<1800px') {
+      right: 0;
+    }
+
+    @include media ('<desktop') {
+      position: static;
+    }
+  }
+}

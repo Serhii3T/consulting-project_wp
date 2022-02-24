@@ -1,0 +1,75 @@
+.c-newsletter {
+  &__wrapper {
+    padding: 50px 0 70px;
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include media ('<phone') {
+      font-size: $fs-quote;
+    }
+
+    &--red {
+      color: $c-lipstick;
+    }
+  }
+
+  &__subtitle {
+    line-height: $lh-address;
+    letter-spacing: $ls-bn;
+    margin-bottom: 35px;
+    font-size: $fs-bn;
+    color: $c-silver;
+  }
+
+  &__form {
+    position: relative;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__input {
+    background-color: $c-alabaster;
+    padding: 23px 170px 23px 30px;
+    border-radius: 20px;
+    border: none;
+    height: 58px;
+    width: 100%;
+
+    @include media ('<phone') {
+      padding-left: 15px;
+      font-size: $fs-sm;
+    }
+
+    &::placeholder {
+      color: $c-silver;
+    }
+  }
+
+  &__btn {
+    background-color: $c-daisy;
+    border-radius: 20px;
+    position: absolute;
+    max-width: 160px;
+    color: $c-white;
+    padding: 0 43px;
+    border: none;
+    height: 50px;
+    right: 4px;
+    top: 4px;
+
+    @include media ('<phone') {
+      font-size: $fs-sm;
+    }
+
+    &:hover {
+      color: $c-viking;
+    }
+  }
+}

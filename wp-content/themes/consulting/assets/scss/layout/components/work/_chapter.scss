@@ -1,0 +1,71 @@
+.c-chapter {
+  &__block {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 60px;
+    position: relative;
+    margin: 50px auto;
+    min-height: 720px;
+    display: none;
+    z-index: 1;
+
+    //&--bg {
+    //  position: absolute;
+    //  background-size: cover;
+    //  z-index: 0;
+    //  bottom: 0;
+    //  right: 0;
+    //}
+
+    &.active {
+      display: block;
+    }
+
+    @include media ('<1585px') {
+      background-image: none !important;
+      padding: 0 40px;
+      height: 100%;
+    }
+
+    @include media ('<tablet') {
+      padding: 0 20px;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    letter-spacing: $ls-sublogo;
+    justify-content: center;
+    margin: 50px auto 30px;
+    font-family: $f-chivo;
+    font-weight: bold;
+    font-size: $fs-sm;
+    color: $c-daisy;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    border: none;
+
+    &.hidden {
+      display: none;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include media ('<1585px') {
+      border-bottom-right-radius: 60px;
+      position: absolute;
+      max-width: 600px;
+      display: block;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.c-navigation {
+  &__list {
+    letter-spacing: $ls-sm;
+    font-family: $f-chivo;
+    line-height: $lh-btn;
+    font-weight: bold;
+    display: flex;
+
+    & > li,
+    & .menu-item {
+      margin-right: 45px;
+
+      @include media ('<800px') {
+        margin-right: 0;
+      }
+    }
+  }
+}

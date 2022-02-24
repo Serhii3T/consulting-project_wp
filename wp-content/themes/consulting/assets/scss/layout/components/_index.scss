@@ -1,0 +1,28 @@
+// Global
+@import 'header';
+@import 'footer';
+@import 'navigation';
+
+// Home page
+@import 'banner';
+@import 'about';
+@import 'our-mission';
+@import 'featured-work';
+@import 'services';
+@import 'comment';
+@import 'newsletter';
+
+// About page
+@import './about/about-banner';
+@import './about/firm';
+@import './about/forward';
+@import './about/clients';
+
+// Work page
+@import './work/work';
+@import './work/chapter';
+
+// Contact page
+@import './contact/contact-banner';
+@import './contact/map';
+@import './contact/form';
